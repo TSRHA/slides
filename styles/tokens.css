@@ -1,0 +1,34 @@
+/*
+ * TSRHA design tokens
+ * ---------------------------------------------------------------------------
+ * Palette: deep ocean blue base, white / light-grey text, restrained teal
+ * accent. No high-saturation gradients, no neon. All values are muted and
+ * documentary in feel.
+ */
+:root {
+  /* Ocean base — dark to darkest */
+  --sea-abyss: #061523;
+  --sea-deep: #0a2338;
+  --sea-mid: #123a5a;
+  --sea-line: rgba(255, 255, 255, 0.08);
+
+  /* Text — white / light grey */
+  --ink: #f2f7fb;
+  --ink-muted: #a7bccd;
+  --ink-faint: #607889;
+
+  /* Accent — muted sea teal, used sparingly */
+  --accent: #58c2b0;
+  --accent-soft: rgba(88, 194, 176, 0.16);
+
+  /* Typography — local / system fonts only, no remote webfonts */
+  --font-sans: 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Microsoft JhengHei',
+    'Noto Sans TC', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  --font-serif: 'Songti TC', 'Noto Serif TC', 'Noto Serif CJK TC', 'PingFang TC',
+    Georgia, 'Times New Roman', serif;
+
+  /* Rhythm */
+  --gutter: 4.5rem;
+  --footer-h: 3.25rem;
+}

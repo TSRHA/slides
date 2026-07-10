@@ -1,0 +1,82 @@
+/*
+ * Global slide styles for the TSRHA template.
+ * Loaded via the root ./style.css entry (which Slidev auto-injects).
+ */
+
+.slidev-layout {
+  /* Every slide sits on the ocean base by default. Individual layouts paint
+     their own richer background on top. */
+  background-color: var(--sea-deep);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  padding: 0;
+  height: 100%;
+}
+
+/* Typographic scale — restrained, large titles, generous line-height. */
+.t-eyebrow {
+  font-size: 0.82rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.t-display {
+  font-size: clamp(2.4rem, 4.6vw, 3.6rem);
+  line-height: 1.16;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.t-statement {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.t-title {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.t-body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink-muted);
+}
+
+.t-brand-en {
+  font-family: var(--font-serif);
+  letter-spacing: 0.02em;
+}
+
+/* Thin accent rule used by section labels and dividers. */
+.rule-accent {
+  display: inline-block;
+  width: 2.75rem;
+  height: 2px;
+  background: var(--accent);
+}
+
+/* Keep long CJK lines from breaking awkwardly. */
+:lang(zh-Hant),
+:lang(zh) {
+  word-break: keep-all;
+  line-break: strict;
+}
+
+/* Print / PDF export: freeze motion so exported pages capture the final,
+   fully-legible state (no half-drawn text or charts). */
+@media print {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

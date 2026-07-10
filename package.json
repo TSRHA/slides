@@ -1,0 +1,29 @@
+{
+  "name": "tsrha-slides",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.17.1",
+  "description": "台灣海洋永續休閒採捕聯盟 (Taiwan Sustainable Recreational Harvest Alliance, TSRHA) — Slidev 簡報模板",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build --base /slides/ --out dist",
+    "export": "slidev export --output export/tsrha-slides.pdf",
+    "export:png": "slidev export --format png --output export/tsrha-slides",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.17.0",
+    "@slidev/theme-default": "^0.25.0",
+    "echarts": "^6.1.0",
+    "vue": "^3.5.39"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "playwright-chromium": "^1.61.1",
+    "typescript": "^5.9.3",
+    "unocss": "^66.7.5",
+    "vite": "^8.1.4",
+    "vue-tsc": "^3.3.7"
+  }
+}

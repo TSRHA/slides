@@ -1,0 +1,7 @@
+/*
+ * Root style entry — Slidev auto-injects ./style.css.
+ * It simply pulls in the tokens and the global slide styles so the requested
+ * styles/ directory stays the single home for CSS.
+ */
+@import './styles/tokens.css';
+@import './styles/index.css';
