@@ -2,7 +2,7 @@
 layout: content
 label: 科學調查與論證
 labelEn: Evidence-Based Policy
-heading: 自由潛水漁獵需要被調查，而不是被預設有罪
+heading: 自由潛水漁獵需要被理解與尊重
 lead: 正式政策應要求公開、可重複檢驗的證據鏈。
 ---
 
