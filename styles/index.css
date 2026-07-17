@@ -203,6 +203,133 @@
   color: var(--ink-muted);
 }
 
+.petition-board {
+  position: relative;
+  margin-top: -0.75rem;
+  border: 2px solid rgba(88, 194, 176, 0.52);
+  background:
+    linear-gradient(180deg, rgba(88, 194, 176, 0.10), rgba(255, 255, 255, 0.025)),
+    rgba(6, 21, 35, 0.72);
+  padding: 0.82rem 1.25rem 0.78rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+.petition-headline {
+  color: var(--ink);
+  font-size: clamp(1.18rem, 2.15vw, 1.72rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.petition-numbers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.62rem;
+}
+
+.petition-number-card {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: baseline;
+  gap: 0.38rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(88, 194, 176, 0.12);
+  padding: 0.46rem 0.8rem;
+}
+
+.petition-number {
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6.1vw, 4.9rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.petition-unit {
+  color: var(--ink);
+  font-size: 1.24rem;
+  font-weight: 800;
+}
+
+.petition-number-card strong {
+  color: var(--ink);
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  justify-self: end;
+}
+
+.petition-growing {
+  margin: 0.5rem auto 0;
+  width: max-content;
+  max-width: 100%;
+  border-top: 1px solid rgba(88, 194, 176, 0.42);
+  border-bottom: 1px solid rgba(88, 194, 176, 0.42);
+  color: var(--ink);
+  padding: 0.16rem 0.88rem;
+  font-size: 1.06rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.support-columns {
+  display: grid;
+  grid-template-columns: 0.86fr 1.14fr;
+  gap: 0.86rem;
+  margin-top: 0.58rem;
+}
+
+.support-section {
+  min-width: 0;
+  border-top: 1px solid var(--sea-line);
+  padding-top: 0.42rem;
+}
+
+.support-columns h3 {
+  margin: 0 0 0.25rem;
+  color: var(--ink);
+  font-size: 0.93rem;
+  line-height: 1.2;
+}
+
+.support-columns h3 small {
+  margin-left: 0.28rem;
+  color: var(--ink-faint);
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+
+.support-columns ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.support-columns li {
+  position: relative;
+  margin: 0.12rem 0;
+  padding-left: 0.65rem;
+  color: var(--ink-muted);
+  font-size: 0.65rem;
+  line-height: 1.24;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: loose;
+}
+
+.support-columns li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
 /* Print / PDF export: freeze motion so exported pages capture the final,
    fully-legible state (no half-drawn text or charts). */
 @media print {
