@@ -23,6 +23,10 @@ src: ./pages/01-cover.md
 ---
 
 ---
+src: ./pages/02-petition-support.md
+---
+
+---
 src: ./pages/02-who-we-are.md
 ---
 
