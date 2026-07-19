@@ -13,7 +13,19 @@
   height: 100%;
 }
 
-/* Typographic scale — restrained, large titles, generous line-height. */
+/* Mobile Safari may apply text autosizing inside Slidev's scaled canvas.
+   Lock text sizing so iPhone/iPad don't enlarge only some paragraphs/bullets
+   and visually stack separate lines on top of each other. */
+html,
+body,
+#app,
+.slidev-layout,
+.slide-surface {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Typography scale — restrained, large titles, generous line-height. */
 .t-eyebrow {
   font-size: 0.82rem;
   letter-spacing: 0.28em;
@@ -83,8 +95,9 @@
 
 .prose-brief li {
   position: relative;
-  margin: 0.62rem 0;
+  margin: 0.72rem 0;
   padding-left: 1.15rem;
+  line-height: 1.85;
 }
 
 .prose-brief li::before {
@@ -309,11 +322,11 @@
 
 .support-columns li {
   position: relative;
-  margin: 0.12rem 0;
+  margin: 0.18rem 0;
   padding-left: 0.65rem;
   color: var(--ink-muted);
   font-size: 0.65rem;
-  line-height: 1.24;
+  line-height: 1.42;
   word-break: normal;
   overflow-wrap: anywhere;
   line-break: loose;
