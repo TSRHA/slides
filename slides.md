@@ -13,7 +13,7 @@ info: |
 lang: zh-TW
 class: text-left
 mdc: true
-transition: fade
+transition: none
 colorSchema: dark
 fonts:
   provider: none
