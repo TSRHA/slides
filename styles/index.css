@@ -105,11 +105,35 @@ body,
   background: var(--accent);
 }
 
-/* Keep long CJK lines from breaking awkwardly. */
+/* Let Traditional Chinese copy wrap inside Slidev's scaled canvas.
+   `keep-all` looks nicer on desktop but causes long paragraphs/bullets to
+   extend across columns on iPhone/iPad Safari, visually overlapping other
+   blocks. */
 :lang(zh-Hant),
 :lang(zh) {
-  word-break: keep-all;
-  line-break: strict;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: loose;
+}
+
+.content-slot,
+.content-slot *,
+.prose-brief,
+.prose-brief *,
+.problem-list,
+.problem-list *,
+.policy-card,
+.policy-card *,
+.case-card,
+.case-card *,
+.callout-line,
+.pill-list,
+.pill-list * {
+  min-width: 0;
+  max-width: 100%;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: loose;
 }
 
 /* Reusable editorial patterns for policy briefing pages. */
