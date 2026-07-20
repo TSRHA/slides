@@ -47,6 +47,10 @@ src: ./pages/06-international-management.md
 ---
 
 ---
+src: ./pages/07-palau-management.md
+---
+
+---
 src: ./pages/07-science.md
 ---
 
