@@ -21,8 +21,38 @@ body,
 #app,
 .slidev-layout,
 .slide-surface {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+@media screen and (max-width: 900px), screen and (hover: none) {
+  html,
+  body,
+  #app,
+  .slidev-layout,
+  .slide-surface,
+  .content-slot,
+  .content-slot *,
+  .slide-footer,
+  .slide-footer * {
+    -webkit-text-size-adjust: none !important;
+    text-size-adjust: none !important;
+  }
+
+  .content-slot p,
+  .content-slot li,
+  .problem-list div,
+  .policy-card p,
+  .case-card p,
+  .callout-line {
+    line-height: 1.9 !important;
+  }
+
+  .prose-brief li,
+  .support-columns li {
+    margin-top: 0.22rem;
+    margin-bottom: 0.22rem;
+  }
 }
 
 /* Typography scale — restrained, large titles, generous line-height. */
