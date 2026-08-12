@@ -8,9 +8,12 @@ lead: 我們關心臺灣沿岸非商業、自用、休閒性採捕如何被看�
 
 <div class="petition-board" style="margin: -0.45rem 0 0.72rem; padding: 0.48rem 1rem">
   <div class="petition-headline" style="font-size: 1.45rem">民間聲援持續增加</div>
-  <div class="petition-numbers" style="grid-template-columns: minmax(0, 1fr); max-width: 22rem; margin: 0.35rem auto 0">
+  <div class="petition-numbers" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.35rem">
     <div class="petition-number-card" style="padding: 0.28rem 0.7rem">
-      <span class="petition-number" style="font-size: 4rem">875</span><span class="petition-unit">人</span><strong>團體聯署</strong>
+      <span class="petition-number" style="font-size: 3.65rem">207</span><span class="petition-unit">份</span><strong>個人陳情書</strong>
+    </div>
+    <div class="petition-number-card" style="padding: 0.28rem 0.7rem">
+      <span class="petition-number" style="font-size: 3.65rem">875</span><span class="petition-unit">人</span><strong>團體聯署</strong>
     </div>
   </div>
 </div>
