@@ -6,10 +6,14 @@
   "packageManager": "pnpm@10.17.1",
   "description": "台灣海洋永續休閒採捕聯盟 (Taiwan Sustainable Recreational Harvest Alliance, TSRHA) — Slidev 簡報模板",
   "scripts": {
-    "dev": "slidev --open",
-    "build": "slidev build --base /slides/ --out dist",
-    "export": "slidev export --output export/tsrha-slides.pdf",
-    "export:png": "slidev export --format png --output export/tsrha-slides",
+    "dev": "slidev --open slides.md",
+    "dev:seminar": "slidev --open seminar.md",
+    "build:main": "slidev build slides.md --base /slides/ --out dist",
+    "build:seminar": "slidev build seminar.md --base /slides/2/ --out dist/2",
+    "build": "rm -rf dist && pnpm build:main && pnpm build:seminar",
+    "export": "slidev export slides.md --output export/tsrha-slides.pdf",
+    "export:seminar": "slidev export seminar.md --output export/tsrha-seminar-slides.pdf",
+    "export:png": "slidev export slides.md --format png --output export/tsrha-slides",
     "typecheck": "vue-tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
