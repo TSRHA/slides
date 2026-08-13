@@ -9,7 +9,7 @@
     "dev": "slidev --open slides.md",
     "dev:seminar": "slidev --open seminar.md",
     "build:main": "slidev build slides.md --base /slides/ --out dist",
-    "build:seminar": "slidev build seminar.md --base /slides/2/ --out dist/2",
+    "build:seminar": "slidev build seminar.md --base /slides/seminar/ --out dist/seminar",
     "build": "rm -rf dist && pnpm build:main && pnpm build:seminar",
     "export": "slidev export slides.md --output export/tsrha-slides.pdf",
     "export:seminar": "slidev export seminar.md --output export/tsrha-seminar-slides.pdf",
