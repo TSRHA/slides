@@ -1,14 +1,50 @@
 ---
 layout: content
-label: 三個政策原則
-labelEn: Principles
-heading: 從「禁止或開放」改成「怎麼治理」
-lead: 研討會的三個軸線，正好可以轉化成制度設計的三個問題。
+label: 自潛漁獵與公民科學
+labelEn: Freedive Harvest
+heading: 自由潛水漁獵，也是海洋公民科學
+lead: 在教育、規範與回報制度下，自潛魚槍可以是可選擇、可紀錄、能協助管理的永續利用方式。
 ---
 
-<div class="problem-list">
-  <div><strong>生態保育</strong>管魚種、體型、繁殖季、棲地承載量與高風險行為，而不是只管工具名稱。</div>
-  <div><strong>資源管理</strong>建立可回報、可檢討、可調整的制度，讓政策不再依賴印象與恐懼。</div>
-  <div><strong>在地文化</strong>承認沿岸生活、原住民族海洋知識與現代自律社群的治理角色。</div>
-  <div><strong>公共信任</strong>用透明科學、比例原則與同等標準，降低不同使用者之間的對立。</div>
+<div class="card-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.62rem">
+  <div class="policy-card" style="min-height: 6.6rem; padding: 0.68rem 0.78rem">
+    <h3>看見後才選擇</h3>
+    <p>自潛魚槍必須先辨識魚種、體型與環境，再決定是否採捕；守法者可做到不採幼魚、不打繁殖主力、不碰保育類。</p>
+  </div>
+  <div class="policy-card" style="min-height: 6.6rem; padding: 0.68rem 0.78rem">
+    <h3>天然限制降低效率</h3>
+    <p>自潛受呼吸、深度、海況與體能限制，不同於水肺或空氣輔助採捕；管理重點應放在高風險行為。</p>
+  </div>
+  <div class="policy-card" style="min-height: 6.6rem; padding: 0.68rem 0.78rem">
+    <h3>傳統且可永續</h3>
+    <p>徒手、魚叉、魚槍等近身漁獵，是島嶼與沿岸文化的生活知識；關鍵是明確的尺寸、數量、季節與場域規則。</p>
+  </div>
+  <div class="policy-card" style="min-height: 6.6rem; padding: 0.68rem 0.78rem">
+    <h3>國際趨勢是納管</h3>
+    <p>地中海、紐澳與太平洋島國多以執照、禁水肺、限量、物種規則與漁獲回報納管休閒魚槍。</p>
+  </div>
 </div>
+
+<div class="callout" style="margin-top: 0.65rem; padding: 0.66rem 0.82rem">
+  <strong>公民科學角色：</strong>自潛漁獵者可回報魚種、體長、數量、海況與棲地變化，協助建立臺灣沿岸資源管理資料。
+</div>
+
+<style>
+:global(.content .content-title) {
+  margin-top: 0.7rem !important;
+}
+:global(.content .content-lead) {
+  margin-top: 0.55rem !important;
+  max-width: 50ch !important;
+}
+:global(.content .content-slot) {
+  margin-top: 0.95rem !important;
+}
+:global(.policy-card h3) {
+  font-size: 1.02rem !important;
+}
+:global(.policy-card p) {
+  font-size: 0.76rem !important;
+  line-height: 1.58 !important;
+}
+</style>
