@@ -22,11 +22,11 @@ src: ./seminar/01-cover.md
 ---
 
 ---
-src: ./seminar/02-question.md
+src: ./seminar/03-alliance.md
 ---
 
 ---
-src: ./seminar/03-alliance.md
+src: ./seminar/02-question.md
 ---
 
 ---

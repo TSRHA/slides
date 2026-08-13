@@ -1,8 +1,8 @@
 ---
 layout: content
-label: 聯盟簡介
-labelEn: Who We Are
-heading: TSRHA 把休閒採捕納入治理
+label: TSRHA 聯盟簡介
+labelEn: About TSRHA
+heading: TSRHA 聯盟簡介
 lead: 我們關心臺灣沿岸非商業、自用、休閒性採捕如何被看見、被教育、被管理、被納入資料回饋。
 ---
 
