@@ -41,10 +41,3 @@ src: ./seminar/05-policy-gap.md
 src: ./seminar/10-dialogue.md
 ---
 
----
-src: ./seminar/11-invitation.md
----
-
----
-src: ./seminar/12-closing.md
----
