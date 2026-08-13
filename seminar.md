@@ -38,22 +38,6 @@ src: ./seminar/05-policy-gap.md
 ---
 
 ---
-src: ./seminar/06-governance-shift.md
----
-
----
-src: ./seminar/07-science.md
----
-
----
-src: ./seminar/08-culture.md
----
-
----
-src: ./seminar/09-policy-package.md
----
-
----
 src: ./seminar/10-dialogue.md
 ---
 
