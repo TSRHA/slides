@@ -3,7 +3,7 @@ layout: content
 label: 官方社群
 labelEn: Official Facebook
 heading: 掃描 QR Code，追蹤聯盟最新倡議資訊
-lead: 台灣海洋永續休閒採捕聯盟官方 Facebook，提供現場來賓掃描追蹤。
+lead: 台灣海洋永續休閒採捕聯盟官方 Facebook
 ---
 
 <div class="official-fb-qr-page">
