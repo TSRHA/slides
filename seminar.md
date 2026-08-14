@@ -41,23 +41,3 @@ src: ./seminar/05-policy-gap.md
 src: ./seminar/10-dialogue.md
 ---
 
----
-src: ./seminar/11-interactive-poll.md
----
-
----
-src: ./seminar/12-quiz-commercial-catch.md
----
-
----
-src: ./seminar/13-quiz-sea-anglers.md
----
-
----
-src: ./seminar/14-quiz-spearfisher-catch.md
----
-
----
-src: ./seminar/15-quiz-answers.md
----
-
