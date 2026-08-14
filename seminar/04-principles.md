@@ -1,9 +1,9 @@
 ---
 layout: content
-label: 自潛漁獵與公民科學
-labelEn: Freedive Harvest
+label: 漁獵與公民科學
+labelEn: Harvest & Citizen Science
 heading: 自由潛水漁獵，也可以是海洋公民科學。
-lead: 在教育、規範與回報制度下，自潛魚槍可以是可選擇、可紀錄、能協助管理的永續利用方式。
+lead: 在教育、規範與回報制度下，魚槍可以是可選擇、可紀錄、能協助管理的永續利用方式。
 ---
 
 <div class="card-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.62rem">
