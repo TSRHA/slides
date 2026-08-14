@@ -124,7 +124,7 @@ onBeforeUnmount(() => {
           <img v-if="qrDataUrl" :src="qrDataUrl" alt="現場問卷 QR code" />
           <div>
             <b>掃描作答</b>
-            <span>{{ pollUrl }}</span>
+            <a class="poll-answer-link" :href="pollUrl" target="_blank" rel="noopener noreferrer">{{ pollUrl }}</a>
           </div>
         </div>
         <div class="poll-status-card">
@@ -293,13 +293,23 @@ onBeforeUnmount(() => {
   font-size: 1.05rem;
 }
 
-.poll-qr-card span,
+.poll-answer-link,
 .poll-status-card small {
   display: block;
-  color: rgba(247, 251, 255, 0.62);
+  color: rgba(247, 251, 255, 0.72);
   font-size: 0.66rem;
   line-height: 1.45;
   overflow-wrap: anywhere;
+}
+
+.poll-answer-link {
+  text-decoration: underline;
+  text-decoration-color: rgba(88, 194, 176, 0.78);
+  text-underline-offset: 0.15rem;
+}
+
+.poll-answer-link:hover {
+  color: #f7fbff;
 }
 
 .poll-dot {
