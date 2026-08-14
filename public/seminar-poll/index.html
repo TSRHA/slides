@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TSRHA 現場互動問卷｜三葉唇魚</title>
+    <title>TSRHA 現場互動問卷</title>
     <style>
       :root {
         color-scheme: dark;
         --sea: #061826;
-        --sea-2: #092438;
         --accent: #58c2b0;
         --ink: #f7fbff;
         --muted: rgba(247, 251, 255, 0.68);
@@ -31,7 +30,7 @@
         padding: 22px 18px 34px;
       }
 
-      img {
+      img.hero {
         width: 100%;
         height: auto;
         max-height: 42svh;
@@ -39,6 +38,8 @@
         object-position: 48% center;
         border: 1px solid var(--line);
       }
+
+      img.hero[hidden] { display: none; }
 
       .kicker {
         margin-top: 20px;
@@ -67,7 +68,7 @@
 
       .choice {
         display: grid;
-        grid-template-columns: 34px minmax(0, 1fr);
+        grid-template-columns: 38px minmax(0, 1fr);
         gap: 12px;
         width: 100%;
         margin: 10px 0;
@@ -79,9 +80,7 @@
         font: inherit;
       }
 
-      .choice:disabled {
-        opacity: 0.62;
-      }
+      .choice:disabled { opacity: 0.62; }
 
       .choice strong {
         display: grid;
@@ -115,36 +114,92 @@
   </head>
   <body>
     <main>
-      <img src="../images/trilobed-wrasse.png" alt="三葉唇魚在礁區海水中游動" />
+      <img id="hero" class="hero" alt="" hidden />
       <div class="kicker">TSRHA 現場互動問卷</div>
-      <h1>我是「三葉唇魚」</h1>
-      <p>我是台灣東北角海岸近礁常見魚類。</p>
-      <div class="question">請問我是：</div>
-
-      <button class="choice" data-answer="fast" type="button">
-        <strong>1</strong>
-        <span>游速快、好奇心強。常常成群結隊。</span>
-      </button>
-      <button class="choice" data-answer="cautious" type="button">
-        <strong>2</strong>
-        <span>警戒心強，游速慢，鬼鬼祟祟。獨立行徑。</span>
-      </button>
-
+      <h1 id="title"></h1>
+      <p id="lead"></p>
+      <div class="question" id="question"></div>
+      <div id="choices"></div>
       <div class="status" id="status" role="status" aria-live="polite"></div>
       <p class="note">本問卷只送出匿名選項代碼到即時訊息通道，供現場簡報頁面當下統計；此頁不要求登入、不收集姓名。</p>
     </main>
 
     <script>
+      const polls = {
+        'trilobed-wrasse': {
+          title: '我是「三葉唇魚」',
+          lead: '我是台灣東北角海岸近礁常見魚類。',
+          question: '請問我是：',
+          image: '../images/trilobed-wrasse.png',
+          imageAlt: '三葉唇魚在礁區海水中游動',
+          choices: [
+            { key: 'fast', label: '游速快、好奇心強。常常成群結隊。', display: '選項 1' },
+            { key: 'cautious', label: '警戒心強，游速慢，鬼鬼祟祟。獨立行徑。', display: '選項 2' },
+          ],
+        },
+        'commercial-catch': {
+          title: '問題一',
+          lead: '臺灣沿岸與近海商業漁業，一年的漁獲量合計約有多少？',
+          question: '請選擇一個答案：',
+          choices: [
+            { key: 'A', label: '13,520 公噸', display: 'A' },
+            { key: 'B', label: '135,200 公噸', display: 'B' },
+            { key: 'C', label: '1,352,000 公噸', display: 'C' },
+          ],
+        },
+        'sea-anglers': {
+          title: '問題二',
+          lead: '臺灣從事海釣活動的人口約有多少？',
+          question: '請選擇一個答案：',
+          choices: [
+            { key: 'A', label: '6 萬人', display: 'A' },
+            { key: 'B', label: '60 萬人', display: 'B' },
+            { key: 'C', label: '600 萬人', display: 'C' },
+          ],
+        },
+        'spearfisher-catch': {
+          title: '問題三',
+          lead: '一名自由潛水魚獵者，一年的平均漁獲量約有多少？',
+          question: '請選擇一個答案：',
+          choices: [
+            { key: 'A', label: '10 公斤', display: 'A' },
+            { key: 'B', label: '100 公斤', display: 'B' },
+            { key: 'C', label: '1,000 公斤', display: 'C' },
+          ],
+        },
+      }
+
       const params = new URLSearchParams(location.search)
+      const poll = params.get('poll') || 'trilobed-wrasse'
+      const config = polls[poll] || polls['trilobed-wrasse']
       const topic = params.get('topic') || 'tsrha-seminar-trilobed-wrasse-20260814'
-      const poll = 'trilobed-wrasse'
       const statusEl = document.querySelector('#status')
+      const choicesEl = document.querySelector('#choices')
+      const labels = Object.fromEntries(config.choices.map((choice) => [choice.key, choice.display]))
+
+      document.title = `TSRHA 現場互動問卷｜${config.title}`
+      document.querySelector('#title').textContent = config.title
+      document.querySelector('#lead').textContent = config.lead
+      document.querySelector('#question').textContent = config.question
+
+      const hero = document.querySelector('#hero')
+      if (config.image) {
+        hero.src = config.image
+        hero.alt = config.imageAlt || config.title
+        hero.hidden = false
+      }
+
+      for (const choice of config.choices) {
+        const button = document.createElement('button')
+        button.className = 'choice'
+        button.dataset.answer = choice.key
+        button.type = 'button'
+        button.innerHTML = `<strong>${choice.display}</strong><span>${choice.label}</span>`
+        choicesEl.appendChild(button)
+      }
+
       const storageKey = `tsrha:${poll}:clientId`
       const voteKey = `tsrha:${poll}:answer:${topic}`
-      const labels = {
-        fast: '選項 1',
-        cautious: '選項 2',
-      }
 
       let clientId = localStorage.getItem(storageKey)
       if (!clientId) {
@@ -174,7 +229,7 @@
           })
           if (!response.ok) throw new Error(`HTTP ${response.status}`)
           localStorage.setItem(voteKey, answer)
-          statusEl.textContent = `已送出${labels[answer]}，螢幕統計會即時更新。你也可以重新點選更改答案。`
+          statusEl.textContent = `已送出${labels[answer] || '答案'}，螢幕統計會即時更新。你也可以重新點選更改答案。`
         } catch (error) {
           statusEl.textContent = '送出失敗，請確認手機網路後再試一次。'
         } finally {
