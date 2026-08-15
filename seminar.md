@@ -49,3 +49,7 @@ src: ./seminar/11-fishery-management-summary.md
 src: ./seminar/12-official-fb-qr.md
 ---
 
+---
+src: ./seminar/13-afternoon-questions-qr.md
+---
+
