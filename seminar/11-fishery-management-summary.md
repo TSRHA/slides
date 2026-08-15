@@ -3,7 +3,7 @@ layout: content
 ---
 
 <figure class="final-image-fullscreen">
-  <img src="./images/fishery-management-summary.jpeg" alt="魚愈來愈少，台灣需要怎樣的漁業管理？現場引言圖卡" />
+  <img src="./images/fishery-management-summary.png" alt="魚愈來愈少，台灣需要怎樣的漁業管理？漁業管理圖卡" />
 </figure>
 
 <style>
